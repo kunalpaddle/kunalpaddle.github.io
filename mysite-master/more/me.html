@@ -1,0 +1,49 @@
+
+<link rel='stylesheet' href='infopage.css' />
+<div id='contentsection'>
+<h1 id='header'>Me!</h1>
+<hr />
+<div class='centerhorizontal' style='background-image: url("https://dl.dropboxusercontent.com/u/52820713/MySite/Pictures/Me/image1.png"); height: 250px; width: 250px; margin-top: 10px; margin-bottom: 20px; border: 2px solid #D0D0D0;'></div>
+<div id='paddingwrapper40px inline'>
+<div class='centerverticalwrapper'>
+<div class='textsection centervertical' id='medium'>
+<p>
+Hey! I'm Siddhant Dange, and I go by Sid. As a software entrepreneur by heart, I'm mostly active in the mobile and web domains. You can check out my side <a class='clickable' id='projects' onclick="loadPageSlide('/' + $(this).attr('id') + '.html');">projects</a>, and my more official projects on my <a href='http://www.linkedin.com/in/siddhantdange' target='_blank'>LinkedIn</a>!
+</p>
+<br />
+<p>
+I'm currently a high school senior graduating in 2013, and a future UC Berkeley alum set to graduate in 2017. Throughout my time in school, I've learned a couple of lessons. I've seen the benefits and importance of people who can stand at the intersection of humanities and technology, and I decided that's what I want to do. This approach in developing a broad skill gives me the tools for the second lesson: Nike's 'Just Do It'. I always make sure to find a way to do, what I want to do.
+</p>
+<br />
+<p>
+I was first formally introduced to the technological world throughout my four years' time in my high school's robotics team. Starting out, I experimented with basic facets of mechanical engineering and design. Over the course of my sophomore year, I switched to the software team, and immediately fell in love. After a year in AP Computer Science and designing the auto-targeting system for the robot using computer vision, I realized that software was my foreseeable future. I came to see that with effort, the possibilities is endless- and thus began my adventures with software and design.
+</p>
+<br />
+<p>
+On another note, I've come to appreciate many types of music, from the classical piano (one that I've learned to play by ear), to the fast paced hip-hop. Naturally, this fits a couple of my hobbies, from Taekwon-Do, to bike riding, to adventuring.
+</p>
+<br />
+<p>
+Go ahead and email me with anything - Just hit <a class='clickable' id='contact' onclick="loadPageSlide('/' + $(this).attr('id') + '.html');">Contact</a>, and I'll try to respond ASAP. Get to me on twitter @siddange!
+</p>
+</div>
+</div>
+</div>
+<br />
+<hr />
+<img class='backgroundimg inline' style='height: 218px; float: left; border-top:none;' src='https://dl.dropboxusercontent.com/u/52820713/MySite/Pictures/Me/image2.png'/>
+<img class='backgroundimg inline' style='float: right; border-top: none;' src='https://dl.dropboxusercontent.com/u/52820713/MySite/Pictures/Me/image3.png' />
+<script type='text/javascript'>
+$(document).ready(function(){
+	$('#tablecontainer #tablelist > ul li').click(function(){
+		$('#tablecontainer > #tabledetail > #tabledetailpage').html($('div#' + $(this).attr('id')).html());
+	
+	$('.clickable').click(function(){
+		alert('here');
+		loadPageSlide('/' + $(this).attr('id') + '.html');
+	});
+});
+</script>
+</div>
+
+

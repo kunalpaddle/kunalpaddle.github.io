@@ -1,0 +1,318 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<link rel='stylesheet' href='/infopage.css' />
+<link href="/css/lightbox.css" rel="stylesheet" />
+<style>
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400);
+
+*{
+	padding: 0px;
+	margin: 0px;
+}
+
+html{
+	height: 100%;
+	width: 100%;
+}
+
+body{
+	background-color: #fffff4;
+	height: 100%;
+	width: 100%;
+}
+
+#hcontainer{
+	display: table;
+	height: 1%;
+	width: 100%;
+	margin-bottom: 2%;
+	
+	
+	text-align: center;
+	
+	-webkit-transition: background-color linear 0.3s
+}
+
+#hcontainer > span{
+	display: table-cell;
+	vertical-align: middle;
+	font-family: 'Lato', sans-serif;
+	font-weight: 100;
+	font-size: 4em;
+	color: #808080;
+	border-bottom: 1px solid #fffff4;
+	
+	-webkit-transition: text-decoration linear 0.3s, color linear 0.2s, background-color linear 0.2s, border-color linear 0.2s;
+}
+
+#hcontainer span:hover{
+	background-color: rgba(240,240,240,0.7);
+	
+	border-color: #D0D0D0;
+}
+
+#bcontainer{
+	height: 80%;
+	width: 100%;
+}
+
+#navpanel{
+	position: fixed;
+	display: table;
+	top: 20%;
+	height: 70%;
+	width: 45%;
+	left: -41%;
+	z-index: 1000;
+	
+	background-color: rgba(150,150,150,0.4);
+	border-right: 1px solid #D0D0D0;
+	
+	-webkit-transition: border-color linear 0.7s, left ease-in-out 0.5s, background-color linear 0.3s;
+}
+
+#navpanel:hover{
+	left: 0%;
+	border-color: rgba(0,0,0,0);
+	background-color: rgba(240,240,240,0.7);
+}
+
+#navpanel > ul{
+	height: 100%;
+	width: 90%;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+#navpanel li{
+	display: table;
+	height: 10%;
+	width: 100%;
+	
+	text-align: center;
+	
+	border: 1px solid #f7f6f6;
+	border-left: 0px;
+	
+	-webkit-transition: background-color linear 0.2s, opacity linear 0.2s, border-color linear 0.2s;
+}
+
+#navpanel li:hover{
+	opacity: 0.5;
+}
+
+#navpanel li:hover a{
+	color: white;
+}
+
+#navpanel li:nth-child(5n+1):hover{
+background:#33B5E5;
+background-color:#33B5E5;
+}
+
+#navpanel li:nth-child(5n+2):hover{
+background:#AA66CC;
+background-color:#AA66CC;
+}
+
+#navpanel li:nth-child(5n+3):hover{
+background:#99CC00;
+background-color:#99CC00;
+
+}
+
+#navpanel li:nth-child(5n+4):hover{
+background:#FFBB33;
+background-color:#FFBB33;
+
+}
+
+#navpanel li:nth-child(5n+5):hover{
+background:#FF4444;
+background-color:#FF4444;
+}
+
+#navpanel li > a{
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+	font-size: 1.5em;
+	color:#808080;
+	text-decoration: none;
+	display: table-cell;
+	vertical-align: middle;
+	
+	-webkit-transition: color linear 0.2s;
+}
+
+#navtabbar{
+	display: table;
+	height: 100%;
+	width: 100%;
+	text-align: center;
+}
+
+#navtabbar > span{
+	display: table-cell;
+	vertical-align: middle;
+	font-family: 'Lato', sans-serif;
+	font-weight: 200;
+	font-size: 1.5em;
+	color:#808080;
+}
+
+#pagecontainer{
+	position: relative;
+	height: 98%;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	overflow-y: hidden;
+	
+	background-color: rgba(240,240,240,0.6);
+	border: 1px solid #D0D0D0;
+	
+}
+
+#pagecontainer > #page{
+	position: relative;
+	height: 95%;
+	width: 90%;
+	top: -100%;
+	margin-left: auto;
+	margin-right:auto;
+	background-color: rgba(200,200,200,0.1);
+	border: 1px solid #D0D0D0;
+	overflow: scroll;
+	z-index: 500;
+	
+	-webkit-transition: background-color linear 0.2s, top ease-in-out 0.5s, height linear 0.5s, width linear 0.5s;
+}
+
+#pagecontainer > #page:hover{
+	background-color: rgba(200,200,200,0.2);
+}
+
+#fcontainer{
+	display: table;
+	height: 5%;
+	width: 100%;
+	
+	text-align: center;
+}
+
+#fcontainer > span{
+	display: table-cell;
+	vertical-align: middle;
+	
+	font-family: 'Lato', sans-serif;
+	font-weight: 200;
+	font-size: 1.5em;
+	color:#808080;
+}
+
+</style>
+</head>
+<title>Sid - Considerably Dangerous</title>
+<body>
+	<div id='hcontainer'><span>Sid</span></div>
+	<div id='bcontainer'>
+		<div id='navpanel'>
+			<ul>
+				<li><a class='ajaxload' id='/home.html'>Home<a/></li>
+				<li><a class='ajaxload' id='/me.html'>Me</a></li>
+				<li><a class='ajaxload' id='/projects.html'>Projects</a></li>
+				<li><a class='ajaxload' id='/press.html'>Press</a></li>
+				<li><a href='http://www.linkedin.com/in/siddhantdange' target='_blank'>LinkedIn</a></li>
+				<li><a href='http://www.siddhantdange.tumblr.com' target='_blank'>PhotoBlog</a></li>
+				<li><a class='ajaxload' id='/contact.html'>Contact</a></li>
+			</ul>
+			<div id='navtabbar'>
+				<span>&#8250;</span>
+			</div>
+		</div>
+		
+		<div id='pagecontainer'>
+			<div id='page'>
+			</div>
+		</div>
+	</div>
+	<div id='fcontainer'><span>&copy; 2013</span></div>
+</body>
+<footer>
+<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
+<script src="/js/lightbox.js"></script>
+<script type="text/javascript" id='myscript'>
+var linkColors = ['#33B5E5',
+'#99CC00',
+'#FFBB33',
+'#FF4444',
+'#AA66CC'];
+
+$(document).ready(function(){
+	/*set the navbar metrics based on number of links*/
+	//set height
+	$('#navpanel li').css('height','12%'); //.9/($('#navpanel li').length) * 100 + '%'
+	
+	//set margins
+	$('#navpanel li').css('margin-bottom',8 + 'px');
+	$('#navpanel li').last().css('margin-bottom',0 + 'px');
+	
+	//load home page-slide
+	setTimeout(function(){
+		$('#page').load('/home.html #contentsection',function(){
+			$('#page').css('height','95%');
+			$('#page').css('top','2.5%');
+		});
+	}, 700);
+	
+	//navlink clicked
+	$('#navpanel li > a').click(function(){
+		loadPageSlide($(this).attr('id'));
+		var colIndex = $('#navpanel li').index($(this).parent()) % 5;
+		$('#hcontainer').css('background-color',linkColors[colIndex]);
+		$('#hcontainer span').css('color','white');
+		$('#hcontainer span').css('border-color','#D0D0D0');
+	});
+	
+	$('#hcontainer span').click(function(){
+		loadPageSlide('/home.html');
+	});
+	
+	//table tab clicked
+	$('#tablecontainer > #tabledetail > #tabledetailpage').html($('div#' + $(this).attr('id')).html());
+	
+	//page-slide 'clickable' clicked
+	$('.clickable').click(function(){
+		alert('here');
+		loadPageSlide('/' + $(this).attr('id') + '.html');
+	});
+});
+
+var loadPageSlide = function($linkAddress){
+	//move page down
+	$('#page #contentsection').fadeOut(200,function(){$('#page').html('')});
+	
+	$('#page').css('top','-100%');
+	setTimeout(function(){
+		$('#page').css('height','0%');
+		$('#page').load($linkAddress + ' #contentsection');
+		setTimeout(function(){
+			$('#page').css('height','95%');
+			
+			setTimeout(function(){
+				$('#page').css('top','2.5%');
+			//$('#hcontainer').css('background-color','rgba(240,240,240,0.7)');
+			$('#hcontainer').css('background-color','#fffff4');
+			$('#hcontainer span').css('color','#808080');
+			$('#hcontainer span').css('border-color','#fffff4');
+			}, 400);
+		}, 800);
+	},500);
+}
+
+</script>
+<script src='/infopage.js'></script>
+</footer>
+</html>
